@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ultimate AI AlphaGo - Introduction</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/sidebarfloat.js"></script>
+</head>
+<body data-spy="scroll" data-target="#sidenavbar" data-offset="15">
+    <!--[if lt IE 10]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--Top navigation bar-->
+    <nav class="navbar navbar-inverse" id="Top">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">AlphaGo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="topNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="intro.html">Intoduction</a></li>
+                    <li><a>News</a></li>
+                    <li><a>Artificial Intelligence</a></li>
+                    <li><a>About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!--Banner-->
+        <div class="jumbotron" id="jumbotron">
+            <img src="images/Alphago_logo.png" class="img-responsive center-block"  alt="logo" id="logo-img" />
+            <p class="text-right" id="subtitle">Together, we are building the tomorrow for artificial intelligence.</p>
+        </div>
+
+        <div class="row content">
+            <!--Left side pannel-->
+            <div class="col-sm-3 panel-group visible-sm visible-md visible-lg" id="sidebar">
+                <!--Left navigation panel-->
+                <nav class="panel panel-default" id="sidenavbar">
+                    <div class="panel-heading text-center"><a href="#Top"><strong>Contents</strong></a></div>
+                    <ul class="nav nav-pills nav-stacked panel-body" data-offset-top="205">
+                        <li><a href="#Introduction">Introduction</a></li>
+                        <li><a href="#Hardware">Hardware</a></li>
+                        <li><a href="#Algorithm">Algorithm</a></li>
+                    </ul>
+                </nav>
+                <!--Left search pannel-->
+                <div class="panel panel-default" id="sidesearchbar">
+                    <div class="panel-heading text-center"><strong>Search</strong></div>
+                    <div class="input-group panel-body">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--Main panel for articles-->
+            <div class="col-sm-9 panel-group">
+                <!--Introduction Panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2 id="Introduction">Introduction</h2></div>
+                    <div class="panel-body">
+                        <img src="images/alphago-intro.png" class="imageboarder img-responsive img-rounded pull-right" alt="AlphaGO" width="400"/>
+
+                        <p><b>AlphaGo</b> is a computer program developed by <a href="https://en.wikipedia.org/wiki/Google_DeepMind">Google DeepMind</a> in London to play the board game Go.
+                            In October 2015, it became the first Computer Go program to beat a professional human Go player without
+                            handicaps on a full-sized 19×19 board. In March 2016, it beat Lee Sedol in a five-game match, the first time
+                            a computer Go program has beaten a 9-dan professional without handicaps. Although it lost to Lee Sedol
+                            in the fourth game, Lee resigned the final game, giving a final score of 4 games to 1 in favour of AlphaGo.
+                            In recognition of beating Lee Sedol, AlphaGo was awarded an honorary 9-dan by the Korea Baduk Association.</p>
+
+                        <p>AlphaGo's algorithm uses a <a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">Monte Carlo tree search</a> to find its moves based on knowledge previously
+                            "learned" by <a href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a>, specifically by an <a href="https://en.wikipedia.org/wiki/Artificial_neural_network">artificial neural network</a> (a deep learning method)
+                            by extensive training, both from human and computer play.</p>
+                    </div>
+                </div>
+                <!--Hardware Panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2 id="Hardware">Hardware</h2></div>
+                    <div class="panel-body">
+                        <p>An early version of AlphaGo was tested on hardware with various numbers of CPUs and GPUs, running in asynchronous or distributed mode.
+                            Two seconds of thinking time was given to each move. The resulting Elo ratings are listed below.
+                            In the matches with more time per move higher ratings are achieved.</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <caption style="text-align: center;">Configuration and performance</caption>
+                                <thead><tr style="background:#ececec; vertical-align:top;">
+                                    <th>Configuration</th>
+                                    <th>Search threads</th>
+                                    <th>No. of CPU</th>
+                                    <th>No. of GPU</th>
+                                    <th>Elo rating</th>
+                                </tr></thead><tbody>
+                            <tr>
+                                <td align="left">Single</td>
+                                <td>40</td>
+                                <td>48</td>
+                                <td>1</td>
+                                <td>2,151</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Single</td>
+                                <td>40</td>
+                                <td>48</td>
+                                <td>2</td>
+                                <td>2,738</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Single</td>
+                                <td>40</td>
+                                <td>48</td>
+                                <td>4</td>
+                                <td>2,850</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Single</td>
+                                <td>40</td>
+                                <td>48</td>
+                                <td>8</td>
+                                <td>2,890</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Distributed</td>
+                                <td>12</td>
+                                <td>428</td>
+                                <td>64</td>
+                                <td>2,937</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Distributed</td>
+                                <td>24</td>
+                                <td>764</td>
+                                <td>112</td>
+                                <td>3,079</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Distributed</td>
+                                <td>40</td>
+                                <td>1,202</td>
+                                <td>176</td>
+                                <td>3,140</td>
+                            </tr>
+                            <tr>
+                                <td align="left">Distributed</td>
+                                <td>64</td>
+                                <td>1,920</td>
+                                <td>280</td>
+                                <td>3,168</td>
+                            </tr>
+                            </tbody><tfoot></tfoot></table>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Algorithm Panel-->
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2 id="Algorithm">Algorithm</h2></div>
+                    <div class="panel-body">
+                        <img src="images/27-alphagonets.jpg" class="imageboarder img-responsive img-rounded pull-left" alt="AlphaGO Nets" width="500"/>
+                        <p>As of 2016, AlphaGo's algorithm uses a combination of <a href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a> and tree search techniques, combined with extensive training,
+                            both from human and computer play. It uses <a href="https://en.wikipedia.org/wiki/Monte_Carlo_tree_search">Monte Carlo tree search</a>, guided by a "value network" and a "policy network," both implemented
+                            using <a href="https://en.wikipedia.org/wiki/Deep_neural_network">deep neural network</a> technology. A limited amount of game-specific feature detection pre-processing (for example, to highlight whether a move matches a nakade pattern)
+                            is applied to the input before it is sent to the neural networks.</p>
+                        <p>The system's neural networks were initially bootstrapped from human gameplay expertise. AlphaGo was initially trained to mimic human play by attempting to
+                            match the moves of expert players from recorded historical games, using a database of around 30 million moves.
+                            Once it had reached a certain degree of proficiency, it was trained further by being set to play large numbers of games against other instances of itself,
+                            using <a href="https://en.wikipedia.org/wiki/Reinforcement_learning">reinforcement learning</a> to improve its play. To avoid "disrespectfully" wasting its opponent's time, the program is specifically programmed to resign
+                            if its assessment of win probability falls beneath a certain threshold; for the March 2016 match against Lee, the resignation threshold was set to 20%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="container-fluid">
+        <div class="footer text-center">
+            <p><strong>Designed and built by Sun Ziping and Xin Enzhou. Proudly powered by <a href="http://getbootstrap.com/">Bootstrap</a>.</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
